@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_phone.*
 
 class PhoneFragment : Fragment() {
@@ -20,10 +21,12 @@ class PhoneFragment : Fragment() {
         super.onStart()
 
         buttonOpenLogin.setOnClickListener {
-            // ToDo: Open login flow
+            val action = PhoneFragmentDirections.actionPhoneFragmentToLoginPasswordFragment()
+            findNavController().navigate(action)
         }
         buttonOpenSignUp.setOnClickListener {
-            // ToDo: Open sign-up flow
+            val action = PhoneFragmentDirections.actionPhoneFragmentToSignUpEmailFragment()
+            findNavController().navigate(action)
         }
     }
 
