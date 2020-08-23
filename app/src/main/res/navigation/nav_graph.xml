@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/phoneFragment">
 
+    <fragment
+        android:id="@+id/phoneFragment"
+        android:name="com.varunbarad.learn.navigation.PhoneFragment"
+        android:label="PhoneFragment">
+        <action
+            android:id="@+id/action_phoneFragment_to_loginPasswordFragment"
+            app:destination="@id/loginPasswordFragment" />
+        <action
+            android:id="@+id/action_phoneFragment_to_signUpEmailFragment"
+            app:destination="@id/signUpEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginPasswordFragment"
+        android:name="com.varunbarad.learn.navigation.LoginPasswordFragment"
+        android:label="LoginPasswordFragment">
+        <action
+            android:id="@+id/action_loginPasswordFragment_to_loginOtpFragment"
+            app:destination="@id/loginOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginOtpFragment"
+        android:name="com.varunbarad.learn.navigation.LoginOtpFragment"
+        android:label="LoginOtpFragment" />
+    <fragment
+        android:id="@+id/signUpEmailFragment"
+        android:name="com.varunbarad.learn.navigation.SignUpEmailFragment"
+        android:label="SignUpEmailFragment">
+        <action
+            android:id="@+id/action_signUpEmailFragment_to_signUpPasswordFragment"
+            app:destination="@id/signUpPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpPasswordFragment"
+        android:name="com.varunbarad.learn.navigation.SignUpPasswordFragment"
+        android:label="SignUpPasswordFragment">
+        <action
+            android:id="@+id/action_signUpPasswordFragment_to_signUpOtpFragment"
+            app:destination="@id/signUpOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpOtpFragment"
+        android:name="com.varunbarad.learn.navigation.SignUpOtpFragment"
+        android:label="SignUpOtpFragment" />
 </navigation>
