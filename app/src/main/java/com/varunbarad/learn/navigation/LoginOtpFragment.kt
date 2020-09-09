@@ -25,7 +25,7 @@ class LoginOtpFragment : Fragment() {
             findNavController().navigate(action)
         }
         buttonOpenHome.setOnClickListener {
-            // ToDo: Open home screen
+            HomeActivity.start(this.requireContext())
         }
     }
 
