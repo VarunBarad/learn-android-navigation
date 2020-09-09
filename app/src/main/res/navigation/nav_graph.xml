@@ -30,7 +30,13 @@
         android:id="@+id/loginOtpFragment"
         android:name="com.varunbarad.learn.navigation.LoginOtpFragment"
         android:label="LoginOtpFragment"
-        tools:layout="@layout/fragment_login_otp" />
+        tools:layout="@layout/fragment_login_otp">
+        <action
+            android:id="@+id/action_loginOtpFragment_to_loginPasswordFragment"
+            app:destination="@id/loginPasswordFragment"
+            app:popUpTo="@id/loginPasswordFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/signUpEmailFragment"
         android:name="com.varunbarad.learn.navigation.SignUpEmailFragment"
@@ -53,5 +59,16 @@
         android:id="@+id/signUpOtpFragment"
         android:name="com.varunbarad.learn.navigation.SignUpOtpFragment"
         android:label="SignUpOtpFragment"
-        tools:layout="@layout/fragment_sign_up_otp" />
+        tools:layout="@layout/fragment_sign_up_otp">
+        <action
+            android:id="@+id/action_signUpOtpFragment_to_signUpEmailFragment"
+            app:destination="@id/signUpEmailFragment"
+            app:popUpTo="@id/signUpEmailFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signUpOtpFragment_to_signUpPasswordFragment"
+            app:destination="@id/signUpPasswordFragment"
+            app:popUpTo="@id/signUpPasswordFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_login_otp.*
 
 class LoginOtpFragment : Fragment() {
@@ -20,7 +21,8 @@ class LoginOtpFragment : Fragment() {
         super.onStart()
 
         buttonShowPasswordError.setOnClickListener {
-            // ToDo: Show error on login-password screen
+            val action = LoginOtpFragmentDirections.actionLoginOtpFragmentToLoginPasswordFragment()
+            findNavController().navigate(action)
         }
         buttonOpenHome.setOnClickListener {
             // ToDo: Open home screen

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_sign_up_otp.*
 
 class SignUpOtpFragment : Fragment() {
@@ -20,10 +21,12 @@ class SignUpOtpFragment : Fragment() {
         super.onStart()
 
         buttonShowEmailError.setOnClickListener {
-            // ToDo: Show error on sign-up email screen
+            val action = SignUpOtpFragmentDirections.actionSignUpOtpFragmentToSignUpEmailFragment()
+            findNavController().navigate(action)
         }
         buttonShowPasswordError.setOnClickListener {
-            // ToDo: Show error on sign-up password screen
+            val action = SignUpOtpFragmentDirections.actionSignUpOtpFragmentToSignUpPasswordFragment()
+            findNavController().navigate(action)
         }
         buttonOpenHome.setOnClickListener {
             // ToDo: Open home screen

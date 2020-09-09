@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_sign_up_email.*
 
 class SignUpEmailFragment : Fragment() {
@@ -20,7 +21,8 @@ class SignUpEmailFragment : Fragment() {
         super.onStart()
 
         buttonOpenSignUpPassword.setOnClickListener {
-            // ToDo: Open sign-up-password screen
+            val action = SignUpEmailFragmentDirections.actionSignUpEmailFragmentToSignUpPasswordFragment()
+            findNavController().navigate(action)
         }
     }
 
